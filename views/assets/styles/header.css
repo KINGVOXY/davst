@@ -1,0 +1,99 @@
+header {
+    width: 100%;
+    min-height: 65px;
+    background-color: #252e3f;
+}
+.d-flex {
+    display: flex;
+}
+.h-box {
+    width: 90%;
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: baseline;
+    text-decoration: none;
+}
+
+#toggle, #toggle-label {
+    display: none;
+}
+
+#logo-text {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.6em;
+    display: block;
+    padding: 10px;
+    color: #c9d1d9;
+}
+#logo-text>div {
+    display: inline-block;
+    transform: rotate(-15deg);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#nav-bar {
+    justify-content: flex-end;
+    margin-left: auto;
+
+}
+
+
+
+.nav-links>a {
+    margin-left: 1em;
+    display: block;
+    padding: 10px;
+    color: #c9d1d9;
+}
+.nav-links>a>span {
+    font-size: 0.8em;
+}
+.nav-links>a>i {
+    font-size: 1.1em;
+}
+
+#logo-text:hover,
+.nav-links:hover
+{
+    text-decoration: none;
+}
+
+@media (max-width:480px) {
+    #logo-text {
+        margin: auto;
+        width: fit-content;
+        text-align: center;
+    }
+    .h-box {
+        margin-left: auto;
+    }
+    .d-flex {
+        width: 100%;
+        display: block;
+    }
+    #nav-bar {
+        display: none;
+    }
+    #toggle-label {
+        display: block;
+        position: absolute;
+        font-size: 2em;
+        top: 8px;
+        right: 17px;
+        cursor: pointer;
+    }
+    #toggle:checked + #nav-bar {
+        display: block;
+    }
+
+    .nav-links {
+        margin: auto;
+        width: 100%;
+        text-align: left;
+    }
+    .nav-links:hover {
+        background-color: #1a212e;
+    }
+}

@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "HackGen35";
+    src: url("/views/assets/fonts/HackGen-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Fira Code";
+    src: url("/views/assets/fonts/FiraCode-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Noto Sans JP";
+    src: url("/views/assets/fonts/NotoSansJP-Regular.otf") format("opentype");
+}
+
+main {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 80%;
+}
+
+main > code > div,
+span[class*="hljs-"] {
+    font-family: "Fira Code", "HackGen35" !important;
+}
+main > *:not(span[class*="hljs-"]):not(code>div) {
+    font-family: "Noto Sans JP", "HackGen35" !important;
+}
+
+main > pre {
+    border: 1px solid rgb(216, 222, 228);
+    max-width: calc(80% - 0.5em * 2 - 1px * 2);
+}
+
+main > h1 {
+    counter-reset: chapter;
+    font-size: 1.8em;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+}
+
+main>table {
+    max-width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main>h2 {
+    counter-reset: sub-chapter;
+    font-size: 1.5em;
+}
+
+main>h3 {
+    counter-reset: section;
+}
+
+main>h2::before {
+    counter-increment: chapter;
+    content: counter(chapter) ". ";
+}
+
+main>h3::before {
+    counter-increment: sub-chapter;
+    content: counter(chapter) "." counter(sub-chapter) ". ";
+}
+
+main>h4::before {
+    counter-increment: section;
+    content: "(" counter(section) ") ";
+}
+
+main>p>img:not(.emoji) {
+    display: block;
+    margin: auto;
+    width: 90%;
+    max-width: 560px;
+    
+}
+
+main>ul {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+main>img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    height: 50px;
+}

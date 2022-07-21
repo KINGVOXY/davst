@@ -1,0 +1,7 @@
+log
+.vscode
+config/auth.env
+views/result/
+views/home/
+fonts
+views/templates/header.html
