@@ -209,7 +209,7 @@ body hr::after {
   content: "";
 }
 
-body table {
+.github-table {
   border-spacing: 0;
   border-collapse: collapse;
   display: block;
@@ -535,7 +535,7 @@ body blockquote,
 body ul,
 body ol,
 body dl,
-body table,
+.github-table,
 body pre,
 body details {
   margin-top: 0;
@@ -658,26 +658,26 @@ body dl dd {
   margin-bottom: 16px;
 }
 
-body table th {
+.github-table th {
   font-weight: 600;
 }
 
-body table th,
-body table td {
+.github-table th,
+.github-table td {
   padding: 6px 13px;
   border: 1px solid #30363d;
 }
 
-body table tr {
+.github-table tr {
   background-color: #0d1117;
   border-top: 1px solid #21262d;
 }
 
-body table tr:nth-child(2n) {
+.github-table tr:nth-child(2n) {
   background-color: #161b22;
 }
 
-body table img {
+.github-table img {
   background-color: transparent;
 }
 
