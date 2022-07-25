@@ -6,10 +6,6 @@
     font-family: "Fira Code";
     src: url("/views/assets/fonts/FiraCode-Regular.ttf") format("truetype");
 }
-@font-face {
-    font-family: "Noto Sans JP";
-    src: url("/views/assets/fonts/NotoSansJP-Regular.otf") format("opentype");
-}
 
 main {
     margin-left: auto !important;
@@ -22,7 +18,7 @@ span[class*="hljs-"] {
     font-family: "Fira Code", "HackGen35" !important;
 }
 main > *:not(span[class*="hljs-"]):not(code>div) {
-    font-family: "Noto Sans JP", "HackGen35" !important;
+    font-family: "HackGen35" !important;
 }
 
 main > pre {
