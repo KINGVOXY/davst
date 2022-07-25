@@ -1,0 +1,166 @@
+.w-graphs-box {
+    position: relative;
+    overflow-x: auto;
+}
+.graphs-box {
+    margin: auto;
+    padding: 1em auto;
+    background-color: #1a1c20;
+    width: 90%;
+    min-width: 700px;
+    border-radius: 4px;
+}
+
+.graphs-box .cap {
+    margin: 1em;
+    padding: 1em;
+    opacity: .8;
+    text-align: center;
+    word-break: break-all;
+    font-size: .9em;
+}
+
+.graph-box {
+    width: 100%;
+}
+
+.topic-canvas {
+    display: flex;
+    width: 98%;
+    margin: 1em auto;
+}
+
+.topic-canvas .graph-topic {
+    margin: .2rem auto 1rem auto;
+    font-size: .5em;
+    width: 100%;
+    word-break: break-all;
+    text-align: center;
+    opacity: .8;
+}
+
+.graph-canvas {
+    position: relative;
+}
+
+.graph-unit {
+    display: flex;
+    margin: 1em auto;
+    width: 98%;
+    border: #b5b5ca 1px solid;
+    border-radius: 2px;
+}
+
+.divide {
+    margin: auto;
+    position: absolute;
+    width: calc(98% - 1px);
+    left: 1%;
+    border-top: #b6b6b6 1px dashed;
+    opacity: .4;
+}
+
+.divide-90 {
+    top: 10.3%;
+}
+
+.divide-80 {
+    top: 20.25%;
+}
+
+.divide-70 {
+    top: 30.2%;
+}
+
+.divide-60 {
+    top: 40.15%;
+}
+
+.divide-50 {
+    top: 50.1%;
+    opacity: 1;
+}
+
+.divide-40 {
+    bottom: 39.7%;
+}
+
+.divide-30 {
+    bottom: 29.75%;
+}
+
+.divide-20 {
+    bottom: 19.8%;
+}
+
+.divide-10 {
+    bottom: 9.85%;
+}
+
+.bar-graph-wrap {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bar-graph-wrap .graph {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    height: 88%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column-reverse;
+    webkit-box-direction: reverse;
+    ms-flex-direction: column-reverse;
+    webkit-box-align: center;
+    ms-flex-align: center;
+    align-items: center;
+    webkit-box-pack: justify;
+    ms-flex-pack: justify;
+    justify-content: space-between;
+    webkit-animation: graphAnimT 2s forwards;
+    animation: graphAnimT 2s forwards;
+}
+
+.bar-graph-wrap .graph span {
+    font-size: 14px;
+    margin-top: 1px;
+    color: white;
+}
+
+@media screen and (max-width: 750px) {
+    .bar-graph-wrap .graph span {
+        font-size: 12px;
+    }
+}
+
+@-webkit-keyframes graphAnimT {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes graphAnimT {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.bg-g {
+    background-color: #25272c;
+}
