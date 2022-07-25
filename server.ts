@@ -5,18 +5,19 @@ import {
     SystemRequest,
     SystemResponse
 } from "./deps.ts";
-import { readText } from "./funcs/textReader.ts"
+import { TemplateTag } from "./funcs/TemplateTag.ts"
 
 
 // ルーティング
 // routing
 const authdata = (await ConfigReader.read("./config/auth.env"))
+const head = await TemplateTag.getHead();
+const header = await TemplateTag.getHeader();
+const footer = await TemplateTag.getFooter();
 
-System.createRoute(`./views/home/index.html`).URL("/").AUTH(authdata.NAME, authdata.PASS)
+System.createRoute(`./views/home/index.html`).URL("/")
     .GET(async (req: SystemRequest, res: SystemResponse) => {
-        const footer = await readText("../views/templates/footer.html")
-        const header = await readText("../views/templates/header.html")
-        res.preset({ header:header, footer: footer })
+        res.preset({ head: head, header:header, footer: footer })
         await res.setFile(`./views/home/index.html`);
     });
 
@@ -28,9 +29,7 @@ const route_names = [
 for(const route_name of route_names) {
     System.createRoute(`./views${route_name}.html`).URL(route_name).AUTH(authdata.NAME, authdata.PASS)
         .GET(async (req: SystemRequest, res: SystemResponse) => {
-            const footer = await readText("../views/templates/footer.html")
-            const header = await readText("../views/templates/header.html")
-            res.preset({ header: header, footer: footer })
+            res.preset({ head: head, header: header, footer: footer })
             await res.setFile(`./views${route_name}.html`);
         });
 }
