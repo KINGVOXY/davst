@@ -1,6 +1,6 @@
 # Davst
 
-<div style="text-align: center">
+<div align=center>
     <img src="views/assets/images/davst_logo.png">
     <p>卒業研究の実験結果が閲覧できるアプリﾀﾞﾖ</p>
 </div>
