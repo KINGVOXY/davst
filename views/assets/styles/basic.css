@@ -7,6 +7,10 @@
     src: url("/views/assets/fonts/FiraCode-Regular.ttf") format("truetype");
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
 main {
     margin-left: auto !important;
     margin-right: auto !important;
@@ -21,7 +25,7 @@ main > *:not(span[class*="hljs-"]):not(code>div) {
     font-family: "HackGen35" !important;
 }
 
-main > pre {
+.hljs {
     border: 1px solid rgb(216, 222, 228);
     max-width: calc(80% - 0.5em * 2 - 1px * 2);
 }
@@ -87,4 +91,11 @@ footer {
     text-align: center;
     margin-top: 50px;
     height: 50px;
+}
+
+@media screen and (max-width: 400px) {
+    .hljs {
+        border: 1px solid rgb(216, 222, 228);
+        max-width: calc(100% - 0.5em * 2 - 1px * 2);
+    }
 }
