@@ -36,6 +36,8 @@ for(const route_name of route_names) {
 
 // 素材の読み込み
 // assets importing
+System.createRoute('./pwa/manifest.json').URL("/manifest.json");
+System.createRoute('./pwa/serviceWorker.js').URL("/serviceWorker.js");
 System.createRoutes("./views/assets/*");
 
 System.listen("./config/.env", (conf: Config)=>{

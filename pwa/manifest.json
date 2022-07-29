@@ -1,0 +1,22 @@
+{
+    "name": "Davst",
+    "short_name": "davst",
+    "theme_color": "#252e3f",
+    "background_color": "#0d1117",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "/views/assets/images/davst_192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/views/assets/images/davst_512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
