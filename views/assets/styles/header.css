@@ -26,11 +26,24 @@ header {
     padding: 10px;
     color: #c9d1d9;
 }
-#logo-text>div {
+#logo-text>.logo-f {
     display: inline-block;
     transform: rotate(-15deg);
     font-weight: bold;
     font-size: 1.1em;
+}
+
+svg {
+    position: absolute;
+    bottom: -.1em;
+    fill: #c9d1d9;
+
+}
+
+.wrap-svg {
+    display: inline-block;
+    position: relative;
+    width: .88em;
 }
 
 #nav-bar {
